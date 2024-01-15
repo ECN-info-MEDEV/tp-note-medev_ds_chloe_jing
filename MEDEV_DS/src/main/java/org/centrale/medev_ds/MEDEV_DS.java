@@ -14,6 +14,7 @@ public class MEDEV_DS {
         System.out.println("Hello World!");
         System.out.println("ADD Test");
         System.out.println("Test");
-        
+        System.out.println("Test SonarCloud new");
+
     }
 }
