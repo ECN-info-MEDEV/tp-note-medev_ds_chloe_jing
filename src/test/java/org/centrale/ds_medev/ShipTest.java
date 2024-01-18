@@ -37,8 +37,7 @@ public class ShipTest {
         int expResult = 0;
         int result = instance.getType();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -50,8 +49,8 @@ public class ShipTest {
         int type = 0;
         Ship instance = new Ship(0,"Ship",3);
         instance.setType(type);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(0, instance.getType());
+
     }
 
     /**
@@ -61,7 +60,7 @@ public class ShipTest {
     public void testGetName() {
         System.out.println("getName");
         Ship instance = new Ship(0,"Ship",3);
-        String expResult = "";
+        String expResult = "Ship";
         String result = instance.getName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -74,11 +73,10 @@ public class ShipTest {
     @Test
     public void testSetName() {
         System.out.println("setName");
-        String name = "";
+        String name = "Ship";
         Ship instance = new Ship(0,"Ship",3);
         instance.setName(name);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Ship", instance.getName());
     }
 
     /**
@@ -87,12 +85,11 @@ public class ShipTest {
     @Test
     public void testGetCoordinates() {
         System.out.println("getCoordinates");
-        Ship instance = null;
-        ArrayList<Case2D> expResult = null;
+        Ship instance = new Ship(0,"Ship",3);;
+        ArrayList<Case2D> expResult = new ArrayList<>();
+        expResult.add(new Case2D(2, 0, 0));
         ArrayList<Case2D> result = instance.getCoordinates();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -102,11 +99,11 @@ public class ShipTest {
     public void testSetCoordinates() {
         System.out.println("setCoordinates");
         ArrayList<Case2D> coordinates = new ArrayList<Case2D>();
-        coordinates.add(new Case2D)
+        coordinates.add(new Case2D());
         Ship instance = new Ship(0,"Ship",3);
         instance.setCoordinates(coordinates);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(coordinates, instance.getCoordinates());
+
     }
 
     /**
@@ -115,12 +112,10 @@ public class ShipTest {
     @Test
     public void testGetShipState() {
         System.out.println("getShipState");
-        Ship instance = null;
+        Ship instance = new Ship(0,"Ship",3);
         int expResult = 0;
         int result = instance.getShipState();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -130,10 +125,9 @@ public class ShipTest {
     public void testSetShipState() {
         System.out.println("setShipState");
         int shipState = 0;
-        Ship instance = null;
+        Ship instance = new Ship(0,"Ship",3);
         instance.setShipState(shipState);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(0, instance.getShipState());
     }
     
 }

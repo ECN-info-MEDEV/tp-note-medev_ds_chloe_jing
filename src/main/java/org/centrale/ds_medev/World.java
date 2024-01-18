@@ -222,32 +222,6 @@ public class World {
 
     /**
      *
-     * @param player
-     * @param x
-     * @param y
-     */
-    public void shoot(Player player, int x, int y) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(player.getName() + ", choose a position to shoot at from [1,1] to [" + gridSize + "," + gridSize + "].");
-        System.out.println("X coordinate for the attack:");
-        x = scanner.nextInt() - 1; 
-        System.out.println("Y coordinate for the attack:");
-        y = scanner.nextInt() - 1;
-
-        Case2D[][] targetGrid = (player == player1) ? grid2 : grid1;
-        if (x >= 0 && x < gridSize && y >= 0 && y < gridSize) {
-            Case2D targetCase = targetGrid[x][y];
-            targetCase.setCaseState(2); // Set status to "attacked"
-            System.out.println("Please shot at [" + (x + 1) + "," + (y + 1) + "].");
-        } else {
-            System.out.println("Wrong location, please try again");
-        }
-    }
-
-
-    /**
-     *
      * @return
      */
     public boolean isGameover(){

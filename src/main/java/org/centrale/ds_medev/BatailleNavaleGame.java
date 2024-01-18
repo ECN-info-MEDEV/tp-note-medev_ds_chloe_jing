@@ -30,7 +30,7 @@ public class BatailleNavaleGame {
             System.out.println("Please enter Y coordinate for the attack:");
             int y = scanner.nextInt() - 1;
 
-            world.shoot(player, x, y);
+            player.shoot(world);
 
             if (world.isGameOver()) {
                 System.out.println("Game Over! Congratulations :" + player.getName() + " wins!");
