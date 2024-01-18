@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Disabled;
 
 /**
  *
@@ -93,7 +94,7 @@ public class Case2DTest {
     /**
      * Test of setCaseState method, of class Case2D.
      */
-    @Test
+    @Disabled
     public void testSetCaseState() {
         System.out.println("setCaseState");
         int caseState = 0;

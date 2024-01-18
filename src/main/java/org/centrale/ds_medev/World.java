@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 /**
  * Class for the game board
- * @author chloe & jing
+ * @author chloe and jing
  */
 public class World {
     

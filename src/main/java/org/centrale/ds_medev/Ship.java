@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Class for the ships of the game Bataille Navale
- * @author chloe & jing
+ * @author chloe and jing
  */
 public class Ship {
     
@@ -95,7 +95,8 @@ public class Ship {
     
     /**
      * Add a coordinate for the ship
-     * @param coordinates 
+     * @param x
+     * @param y
      */
     public void addCoordinates(int x, int y) {
         Case2D c=new Case2D(x,y,0);

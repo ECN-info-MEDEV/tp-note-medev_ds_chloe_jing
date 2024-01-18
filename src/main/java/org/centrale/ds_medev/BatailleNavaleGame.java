@@ -6,7 +6,7 @@ package org.centrale.ds_medev;
 import java.util.Scanner;
 /**
  * Class to play the game
- * @author chloe & jing
+ * @author chloe and jing
  */
 public class BatailleNavaleGame {
 

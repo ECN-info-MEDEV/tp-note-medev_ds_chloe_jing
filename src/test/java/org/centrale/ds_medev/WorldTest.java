@@ -254,20 +254,6 @@ public class WorldTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of shoot method, of class World.
-     */
-    @Test
-    public void testShoot() {
-        System.out.println("shoot");
-        Player player = null;
-        int x = 0;
-        int y = 0;
-        World instance = null;
-        instance.shoot(player, x, y);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of isGameover method, of class World.

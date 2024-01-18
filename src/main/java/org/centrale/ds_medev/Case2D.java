@@ -6,7 +6,7 @@ package org.centrale.ds_medev;
 
 /**
  * Class for the square case in the grid of the game
- * @author chloe & jing
+ * @author chloe and jing
  */
 public class Case2D {
     
