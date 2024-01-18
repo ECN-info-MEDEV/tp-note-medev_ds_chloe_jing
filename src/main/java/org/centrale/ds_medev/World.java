@@ -29,5 +29,34 @@ public class World {
             }
         }
     }
+    public void startGame(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+        this.turn = player1; //Start from player 1 by default
+        gameOver = false;
+    }
+    public void endGame(){
+        gameOver=true;
+    }
+    public void switchTurn() {
+        if (turn == player1) {
+            turn = player2;
+        } else {
+            turn = player1;
+        }
+    }
+    public void placeShip(Player player1,Player player2){
+        
+    }
+    public void shoot(Player player,int x,int y){
+        
+    }
+    public boolean isGameover(){
+        return gameOver;
+    }
+ 
+    public Case2D[][] getGrid(Player player) {
+        return grid;
+    }
 
 }
