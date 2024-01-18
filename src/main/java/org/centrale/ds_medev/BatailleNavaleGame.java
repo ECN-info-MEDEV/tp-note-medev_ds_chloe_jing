@@ -5,13 +5,12 @@
 package org.centrale.ds_medev;
 
 /**
- *
- * @author chloe
+ * Class to play the game
+ * @author chloe & jing
  */
 public class BatailleNavaleGame {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Test");
+        System.out.println("Game start");
     }
 }
