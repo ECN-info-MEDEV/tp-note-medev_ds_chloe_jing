@@ -48,6 +48,13 @@ public class Ship {
         this.shipState = shipState;
     }
     
+    public Ship(int type, String name, int shipState) {
+        this.type = type;
+        this.name = name;
+        this.coordinates = new ArrayList<>();
+        this.shipState = shipState;
+    }
+    
     //Getters and setters
     
     public int getType() {
@@ -86,5 +93,12 @@ public class Ship {
         this.shipState = shipState;
     }
     
-    
+    /**
+     * Add a coordinate for the ship
+     * @param coordinates 
+     */
+    public void addCoordinates(int x, int y) {
+        Case2D c=new Case2D(x,y,0);
+        this.coordinates.add(c);
+    }
 }

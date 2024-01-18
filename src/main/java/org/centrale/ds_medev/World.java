@@ -12,11 +12,29 @@ import java.util.ArrayList;
  */
 public class World {
     
-    
+    /**
+     * Size of the grid
+     */
     private int gridSize;
+    
+    /**
+     * First player
+     */
     private Player player1;
+    
+    /**
+     * Second player
+     */
     private Player player2;
+    
+    /**
+     * Cases in the grid of the first player
+     */
     private Case2D[][] grid1;
+    
+    /**
+     * Cases in the grid of the second player
+     */
     private Case2D[][] grid2;
     private Player turn;
     private boolean gameOver;
