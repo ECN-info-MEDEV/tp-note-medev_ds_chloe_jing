@@ -96,7 +96,7 @@ public class Player {
     public void shoot(World w){
        Scanner scanner = new Scanner(System.in);
         
-       System.out.println("This grid is of size 5x5. You can choose a position to shoot at from [1,1] to [5,5].");
+       System.out.println("This grid is of size 5x5. You can choose a position to shoot at from [0,0] to [5,5].");
        System.out.println("X coordinate for the attack :");
        int x = scanner.nextInt()-1;
        System.out.println("Y coordinate for the attack :");
@@ -106,6 +106,7 @@ public class Player {
        Case2D[][] grid;
        if (this.name.equals("Player 1")){
            grid=w.getGrid2();
+           opponent=w.getPlayer2()
        }
        else{
            grid=w.getGrid1();
