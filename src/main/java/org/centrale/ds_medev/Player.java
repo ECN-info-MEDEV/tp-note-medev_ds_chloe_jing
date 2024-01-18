@@ -51,17 +51,28 @@ public class Player {
         
         System.out.println("This grid is of size 5x5. You have 3 ships to place, of size 3x1, 4x1, 5x1.");
         System.out.println("Please place your ships on the grid by entering the coordinates one by one.");
-            
+        
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Enter the starting X and Y coordinates for ship " + (i + 1) + ":");
+            int x = scanner.nextInt() - 1; 
+            int y = scanner.nextInt() - 1;
+
+            for (int j = 0; j <= i + 2; j++) {
+                if (y + j < 5) { 
+                    w.getGrid1()[x][y + j].setCaseState(1); 
+                }
+            }
+
         }
-    
+    }
     public void shoot(World w){
        Scanner scanner = new Scanner(System.in);
         
        System.out.println("This grid is of size 5x5. You can choose a position to shoot at from [1,1] to [5,5].");
        System.out.println("X coordinate for the attack :");
-       int x = scanner.nextInt();
+       int x = scanner.nextInt()-1;
        System.out.println("Y coordinate for the attack :");
-       int y = scanner.nextInt();
+       int y = scanner.nextInt()-1;
        
        //Choose the grid to attack
        Case2D[][] grid;
