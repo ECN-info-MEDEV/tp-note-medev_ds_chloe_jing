@@ -14,7 +14,8 @@ public class World {
     private int gridSize;
     private Player player1;
     private Player player2;
-    private Case2D[][] grid;
+    private Case2D[][] grid1;
+    private Case2D[][] grid2;
     private Player turn;
     private boolean gameOver;
 
@@ -42,10 +43,12 @@ public class World {
         this.player2 = player2;
     }
 
-    public Case2D[][] getGrid() {
-        return grid;
+    public Case2D[][] getGrid1() {
+        return grid1;
     }
-
+    public Case2D[][] getGrid2() {
+        return grid2;
+    }
     public void setGrid(Case2D[][] grid) {
 
     }
@@ -70,16 +73,33 @@ public class World {
     
     public World(int gridSize){
         this.gridSize=gridSize;
-        grid=new Case2D[gridSize][gridSize];
+        grid1=new Case2D[gridSize][gridSize];
+        grid2=new Case2D[gridSize][gridSize];
         initializeGrid();
     }
     private void initializeGrid() {
-        for (int i = 0; i < gridSize; i++) {
-            for (int j = 0; j < gridSize; j++) {
-                grid[i][j] = new Case2D(i, j,0);
-            }
+    System.out.println("Grid 1:");
+    for (int i = 0; i < gridSize; i++) {
+        for (int j = 0; j < gridSize; j++) {
+            grid1[i][j] = new Case2D(i, j, 0);
+            //Print the status of the current grid of grid1
+            System.out.print(grid1[i][j].getCaseState() + " ");
         }
+        // Line break: after d1 prints each line of grid
+        System.out.println();
     }
+
+    System.out.println("\nGrid 2:");
+    for (int i = 0; i < gridSize; i++) {
+        for (int j = 0; j < gridSize; j++) {
+            grid2[i][j] = new Case2D(i, j, 0);
+            //Print the status of the current grid of grid1
+            System.out.print(grid2[i][j].getCaseState() + " ");
+        }
+        System.out.println();
+    }
+}
+
     public void startGame(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
@@ -106,8 +126,10 @@ public class World {
         return gameOver;
     }
  
-    public Case2D[][] getGrid(Player player) {
-        return grid;
+    public Case2D[][] getGrid1(Player player) {
+        return grid1;
     }
-
+    public Case2D[][] getGrid2(Player player) {
+        return grid2;
+    }   
 }
