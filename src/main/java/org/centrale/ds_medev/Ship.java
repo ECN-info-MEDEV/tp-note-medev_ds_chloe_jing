@@ -37,10 +37,6 @@ public class Ship {
     
     //Constructors
 
-    public Ship() {
-        
-    }
-
     public Ship(int type, String name, ArrayList<Case2D> coordinates, int shipState) {
         this.type = type;
         this.name = name;
