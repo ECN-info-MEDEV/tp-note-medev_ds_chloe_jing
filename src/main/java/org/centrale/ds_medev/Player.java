@@ -144,7 +144,6 @@ public class Player {
        Player opponent;
        if (this.name.equals("Player 1")){
            grid=w.getGrid2();
-           opponent=w.getPlayer2()
        }
        else{
            grid=w.getGrid1();

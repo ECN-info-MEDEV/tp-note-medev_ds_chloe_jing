@@ -5,7 +5,7 @@
 package org.centrale.ds_medev;
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.Scanner;
 /**
  * Class for the game board
  * @author chloe & jing
@@ -211,9 +211,14 @@ public class World {
      * @param player1
      * @param player2
      */
-    public void placeShip(Player player1,Player player2){
-        
+    public void placeShip(Player player1, Player player2) {
+        System.out.println(player1.getName() + ", please place your ships.");
+        player1.placeShips(this);
+
+        System.out.println(player2.getName() + ", please place your ships.");
+        player2.placeShips(this);
     }
+
 
     /**
      *
@@ -221,9 +226,25 @@ public class World {
      * @param x
      * @param y
      */
-    public void shoot(Player player,int x,int y){
-        
+    public void shoot(Player player, int x, int y) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(player.getName() + ", choose a position to shoot at from [1,1] to [" + gridSize + "," + gridSize + "].");
+        System.out.println("X coordinate for the attack:");
+        x = scanner.nextInt() - 1; 
+        System.out.println("Y coordinate for the attack:");
+        y = scanner.nextInt() - 1;
+
+        Case2D[][] targetGrid = (player == player1) ? grid2 : grid1;
+        if (x >= 0 && x < gridSize && y >= 0 && y < gridSize) {
+            Case2D targetCase = targetGrid[x][y];
+            targetCase.setCaseState(2); // Set status to "attacked"
+            System.out.println("Please shot at [" + (x + 1) + "," + (y + 1) + "].");
+        } else {
+            System.out.println("Wrong location, please try again");
+        }
     }
+
 
     /**
      *
