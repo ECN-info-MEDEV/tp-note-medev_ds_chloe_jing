@@ -8,7 +8,7 @@ package org.centrale.ds_medev;
  *
  * @author chloe
  */
-public class DS_MEDEV {
+public class BatailleNavaleGame {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
