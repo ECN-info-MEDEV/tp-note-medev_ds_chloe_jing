@@ -18,24 +18,45 @@ public class Player {
     private List<Ship> ships;
     
     //Constructor
+
+    /**
+     *
+     * @param name
+     */
     
     public Player(String name){
         this.name = name;
         this.ships = new ArrayList<>();
     }
     
+    /**
+     *
+     * @return
+     */
     public String getName(){
         return name;
     }
     
+    /**
+     *
+     * @param name
+     */
     public void setName(String name){
         this.name=name;
     }
     
+    /**
+     *
+     * @return
+     */
     public List<Ship> getShips() {
         return ships;
     }
 
+    /**
+     *
+     * @param ships
+     */
     public void setShips(List<Ship> ships) {
         this.ships = ships;
     }
@@ -44,7 +65,7 @@ public class Player {
     
     /**
      * Method to place the ships in the player's grid
-     * @param ship 
+     * @param w
      */
     public void placeShips(World w){
         Scanner scanner = new Scanner(System.in);
@@ -54,6 +75,10 @@ public class Player {
             
         }
     
+    /**
+     *
+     * @param w
+     */
     public void shoot(World w){
        Scanner scanner = new Scanner(System.in);
         
@@ -77,9 +102,19 @@ public class Player {
        pos.setCaseState(1);
     }
     //Adds a ship to the player's ship list
+
+    /**
+     *
+     * @param ship
+     */
     public void addShip(Ship ship){
         ships.add(ship);
     }
+
+    /**
+     *
+     * @return
+     */
     public boolean hasShipLeft(){
         for(Ship ship:ships){
             if(ship.getShipState()==0){
